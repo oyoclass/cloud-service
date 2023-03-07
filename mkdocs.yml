@@ -1,0 +1,7 @@
+site_name: Free Cloud Services
+theme: readthedocs
+docs_dir: 'doc'
+nav:
+    - 'Home': 'index.md'
+    - 'Datastores':
+        - 'MongoDB Atlas Cloud Database': 'datastores/mongo.md'
