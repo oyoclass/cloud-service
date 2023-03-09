@@ -4,4 +4,5 @@ docs_dir: 'doc'
 nav:
     - 'Home': 'index.md'
     - 'Datastores':
-        - 'MongoDB Atlas Cloud Database': 'datastores/mongo.md'
+        - 'MongoDB Atlas': 'datastores/mongo.md'
+        - 'Redis': 'datastores/redis.md'
