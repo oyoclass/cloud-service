@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>MongoDB Atlas - Free Cloud Services</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "MongoDB Atlas";
+        var mkdocs_page_input_path = "datastores/mongo.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Free Cloud Services
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Datastores</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">MongoDB Atlas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-account">Creating an Account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-your-database">Creating Your Database</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-your-database-to-work-with-python3-editor">Setting Up Your Database to Work With Python3 Editor</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">Redis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Free Cloud Services</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Datastores &raquo;</li>
+      <li>MongoDB Atlas</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="mongodb">MongoDB</h2>
+<p>MongoDB is a popular <strong>NoSQL</strong> database that can be run on the cloud. MongoDB offers a fully free basic cloud database that you can use how you wish, and works with OYOclass' <a href="https://docs.oyoclass.com/python3editor/">Python3 Editor</a>.</p>
+<p>This is a step-by-step guide on setting up your own free cloud Mongo instance.</p>
+<h3 id="creating-an-account">Creating an Account</h3>
+<p>First, go to <a href="https://www.mongodb.com/free-cloud-database">Mongo's Free Cloud Database</a> page, and click on the <strong>Try Free Now</strong> button:</p>
+<p><img src="../../assets/img/mongo/account1.png" width="500px"></p>
+<p>You will then be taken to a small signup form. You can leave the <em>Company</em> field blank, but you need to fill in your <em>First Name</em>, <em>Last Name</em>, <em>Email</em>, and <em>Password</em>. Agree to the <strong>Terms of Service</strong> and finish creating your account:</p>
+<p><img src="../../assets/img/mongo/account2.png" width="500px"></p>
+<p>You will be required to confirm your email address. Open up your email account and click on the <strong>Verify Email</strong> button when you receieve the email:</p>
+<p><img src="../../assets/img/mongo/verifyemail.png" width="500px"></p>
+<h3 id="creating-your-database">Creating Your Database</h3>
+<p>Once you create an account with the link above, we need to actually create a database. To do this, we can select the following options during account creation:</p>
+<p><img src="../../assets/img/mongo/account3.png" width="500px"></p>
+<p>Then when asked which database type we want, we will choose <strong>M0</strong> because it is free:</p>
+<p><img src="../../assets/img/mongo/account4.png" width="500px"></p>
+<p>Now, the last step of the basic setup is to <strong>create a user in the database</strong>. This is different from your Mongo account, this is an account you define inside your own database. Choose any username and password you want, <strong>but don't forget it</strong>. We will need the username and password later to connect to the database:</p>
+<p><img src="../../assets/img/mongo/create_user.png" width="500px"></p>
+<h3 id="setting-up-your-database-to-work-with-python3-editor">Setting Up Your Database to Work With Python3 Editor</h3>
+<p>Now that we have a fully running Mongo cloud database, we need to make it so Python3 Editor is allowed to connect to it. To do this, we need to do one more thing:</p>
+<p>Click on <strong>Network Access</strong> on the left side of your screen in MongoDB Cloud, then click on <strong>Add IP Address</strong>:</p>
+<p><img src="../../assets/img/mongo/access-menu.png" width="500px"></p>
+<p>In the window that pops up, click on <strong>ALLOW ACCESS FROM ANYWHERE</strong> then click <strong>Confirm</strong>:</p>
+<p><img src="../../assets/img/mongo/access-from-anywhere.png" width="400px"></p>
+<p>Congratulations! You have successfully set up your Mongo cloud instance to work properly via remote connection. For a guide on how to get started using your database, check out the <a href="https://docs.oyoclass.com/python3editor/extralibs/pymongo">Python3 Editor PyMongo Docs</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../redis/" class="btn btn-neutral float-right" title="Redis">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../redis/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
