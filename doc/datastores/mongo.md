@@ -44,4 +44,4 @@ In the window that pops up, click on **ALLOW ACCESS FROM ANYWHERE** then click *
 
 <img src="../../assets/img/mongo/access-from-anywhere.png" width="400px">
 
-Congratulations! You have successfully set up your Mongo cloud instance to work properly via remote connection. For a guide on how to get started using your database, check out the [Python3 Editor PyMongo Docs](https://docs.oyoclass.com/python3editor/extralibs/pymongo).
+Congratulations! You have successfully set up your Mongo cloud instance to work properly via remote connection. For a guide on how to get started using your database, check out the [Python3 Editor Docs](https://docs.oyoclass.com/python3editor/).

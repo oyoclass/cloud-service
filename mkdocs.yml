@@ -6,3 +6,4 @@ nav:
     - 'Datastores':
         - 'MongoDB Atlas': 'datastores/mongo.md'
         - 'Redis': 'datastores/redis.md'
+        - 'Backblaze S3': 'datastores/backblaze.md'
