@@ -1,9 +1,11 @@
 site_name: Free Cloud Services
 theme: readthedocs
 docs_dir: 'doc'
+extra_css: [css/custom.css]
 nav:
     - 'Home': 'index.md'
     - 'Datastores':
+        - 'Backblaze S3': 'datastores/backblaze.md'
+        - 'Firebase': 'datastores/firebase.md'
         - 'MongoDB Atlas': 'datastores/mongo.md'
         - 'Redis': 'datastores/redis.md'
-        - 'Backblaze S3': 'datastores/backblaze.md'
