@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Backblaze S3 - Free Cloud Services</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Backblaze S3";
+        var mkdocs_page_input_path = "datastores/backblaze.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Free Cloud Services
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Datastores</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Backblaze S3</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-account">Creating an Account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-bucket">Creating a Bucket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finding-your-buckets-endpoint-url">Finding Your Bucket's Endpoint URL</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#managing-application-keys">Managing Application Keys</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firebase/">Firebase</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mongo/">MongoDB Atlas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">Redis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Free Cloud Services</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Datastores &raquo;</li>
+      <li>Backblaze S3</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="backblaze">Backblaze</h2>
+<p>Backblaze is a cloud storage service. While Backblaze offers its own client and interface to its storage buckets, it is <strong>S3 compatible</strong> which means you can use it with existing S3 libraries like <strong>boto3</strong>.</p>
+<p>This is a step-by-step guide on setting up your own free Backblaze account and setting it up to work with OYOclass' <a href="https://docs.oyoclass.com/python3editor/">Python3 Editor</a>.</p>
+<h3 id="creating-an-account">Creating an Account</h3>
+<p>First, visit <a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze's Account Creation Page</a> and enter the email you want to use and a password:</p>
+<p><img src="../../assets/img/backblaze/account.png" width="300px"></p>
+<p>After you successfully create an account, a window will pop up asking you if you want to read several guides. You can just click the <strong>Skip Quick Start</strong> button:</p>
+<p><img src="../../assets/img/backblaze/account-success.png" width="400px"></p>
+<h3 id="creating-a-bucket">Creating a Bucket</h3>
+<p>To store data in an S3 service, we first need to make a <strong>bucket</strong>. Buckets are where files are stored in an S3 datatore. To create one with Backblaze, click on the <strong>Create a Bucket</strong> button:</p>
+<p><img src="../../assets/img/backblaze/create-bucket1.png" width="400px"></p>
+<p>A new window will pop up where you will be required to name your bucket and choose some settings on it. Take note of the following restrictions:</p>
+<ul>
+<li>Bucket names are globally unique, so you may not be able to name your bucket exactly what you want to</li>
+<li>Having files in your bucket be private requires you to verify your email first</li>
+</ul>
+<p>After you choose your settings, click the <strong>Create a Bucket</strong> button at the bottom of the window:</p>
+<p><img src="../../assets/img/backblaze/create-bucket2.png" width="400px"></p>
+<h3 id="finding-your-buckets-endpoint-url">Finding Your Bucket's Endpoint URL</h3>
+<p>To use an S3 access like boto3 requires you provide an <strong>endpoint URL</strong> to where the bucket exists. Once you create your bucket, you can see your bucket's <strong>endpoint URL</strong> in your bucket's info:</p>
+<p><img src="../../assets/img/backblaze/endpoint.png" width="500px"></p>
+<h3 id="managing-application-keys">Managing Application Keys</h3>
+<p>Now that you have a bucket, we need to get access keys to authorize ourselves to access our bucket remotely. We can generate them easily by selecting <strong>App Keys</strong> on the left side of the page:</p>
+<p>Then, click on <strong>Add a New Application Key</strong>:</p>
+<p><img src="../../assets/img/backblaze/newappkey.png" width="500px"></p>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        Backblaze offers a global access key, but <b>their global key does not work with s3 clients like boto3</b>. To support s3 clients, we must create a separate access key with this method.
+    </p>
+</div>
+
+<p>A window will pop up asking you for various options. Just set the name of your key and click on <strong>Create New Key</strong>:</p>
+<p><img src="../../assets/img/backblaze/create-key.png" width="400px"></p>
+<p>Finally, a box will show that has your <strong>keyID</strong> and <strong>applicationKey</strong>. This window will only ever show once, so if you lose your applicationKey, you will need to generate a new one. <strong>Be sure not to share these keys with anyone</strong>:</p>
+<p><img src="../../assets/img/backblaze/copykey.png" width="500px"></p>
+<p>Congratulations! You have successfully set up your Backblaze bucket to work properly via remote connection. For a guide on how to get started using your bucket, check out the <a href="https://docs.oyoclass.com/python3editor/">Python3 Editor Docs</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../firebase/" class="btn btn-neutral float-right" title="Firebase">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../firebase/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

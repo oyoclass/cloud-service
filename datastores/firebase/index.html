@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Firebase - Free Cloud Services</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Firebase";
+        var mkdocs_page_input_path = "datastores/firebase.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Free Cloud Services
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Datastores</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../backblaze/">Backblaze S3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Firebase</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-account">Creating an Account</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-project">Creating a Project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-realtime-database">Creating a Realtime Database</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mongo/">MongoDB Atlas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../redis/">Redis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Free Cloud Services</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Datastores &raquo;</li>
+      <li>Firebase</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="firebase">Firebase</h2>
+<p>Firebase is a cloud development platform offered by Google. Firebase is a large and expansive service that can do many things, but one of the modules offered is a realtime database that can be accessed remotely.</p>
+<p>This is a step-by-step guide on setting up your own free Firebase realtime database instance.</p>
+<h3 id="creating-an-account">Creating an Account</h3>
+<div class="notebox notebox-info">
+    <p class="notebox-title">
+        Note
+    </p>
+    <p>
+        If you already have a Google account, then you can skip to the <b>Creating a Project</b> section.
+    </p>
+    <p>
+        You will need a working phone number to recieve a confirmation text to create a Google account.
+    </p>
+</div>
+
+<p>To use Firebase, you must have a Google account. So the first thing we need to do is create one. Click on the <strong>Get started</strong> button and you will be brought to the Google sign in page:</p>
+<p><img src="../../assets/img/firebase/get-started.png" width="400px"></p>
+<p>Then, click on the <strong>Create Account</strong> button:</p>
+<p><img src="../../assets/img/firebase/create-account1.png" width="400px"></p>
+<p>In the menu that appears, click <strong>For My Personal Use</strong>:</p>
+<p><img src="../../assets/img/firebase/create-account2.png" width="200px"></p>
+<p>Fill out this info, then click <strong>Next</strong>:</p>
+<p><img src="../../assets/img/firebase/create-account3.png" width="300px"></p>
+<p>Enter your phone number, then click <strong>Next</strong>:</p>
+<p><img src="../../assets/img/firebase/create-account4.png" width="400px"></p>
+<p>After you verify your phone number, you will be asked for your birthdate. After you enter it and agree to Google's terms of service, you now have a fully functioning Google account, and can create a Firebase project!</p>
+<h3 id="creating-a-project">Creating a Project</h3>
+<p>Before we create a database, we need to create a <strong>project</strong> for it to be associated with. Click on <strong>Create a project</strong>:</p>
+<p><img src="../../assets/img/firebase/create-project1.png" width="400px"></p>
+<p>Then in the next page, decide on a name and click <strong>Continue</strong>:</p>
+<p><img src="../../assets/img/firebase/create-project2.png" width="400px"></p>
+<h3 id="creating-a-realtime-database">Creating a Realtime Database</h3>
+<p>Now that we have a project, we need to add a realtime database to it. In your web browser, on the left side of your screen, find the <strong>Build</strong> section and click on <strong>Realtime Database</strong>:</p>
+<p><img src="../../assets/img/firebase/rtdb.png" width="200px"></p>
+<p>On the next page, click on <strong>Create Database</strong>:</p>
+<p><img src="../../assets/img/firebase/create-database1.png" width="300px"></p>
+<p>In the window that pops up, we won't need to change anything. Click on <strong>Next</strong>:</p>
+<p><img src="../../assets/img/firebase/create-database2.png" width="400px"></p>
+<p>Then click on <strong>Enable</strong>:</p>
+<p><img src="../../assets/img/firebase/create-database3.png" width="400px"></p>
+<p>Congratulations! Your database is now set up and ready to use! You will need to download the credentials JSON for your project to connect to it from your programs. You can read about how to get your Firebase realtime database working with Python3 Editor in the <a href="https://docs.oyoclass.com/python3editor/">Python3 Editor Docs</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../backblaze/" class="btn btn-neutral float-left" title="Backblaze S3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mongo/" class="btn btn-neutral float-right" title="MongoDB Atlas">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../backblaze/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mongo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
