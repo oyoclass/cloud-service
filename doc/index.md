@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# Cloud Services
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This page serves as a collection of free cloud services you can sign up for and use on editors within OYOclass.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To get started, click on any of the services offered on the left.
