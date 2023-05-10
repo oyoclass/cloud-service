@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Redis - Free Cloud Services</title>
+    <title>OpenAI - Free Cloud Services</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Redis";
-        var mkdocs_page_input_path = "datastores/redis.md";
+        var mkdocs_page_name = "OpenAI";
+        var mkdocs_page_input_path = "ai/openai.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,21 +47,21 @@
               </ul>
               <p class="caption"><span class="caption-text">Datastores</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../backblaze/">Backblaze S3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../datastores/backblaze/">Backblaze S3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../firebase/">Firebase</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../datastores/firebase/">Firebase</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../mongo/">MongoDB Atlas</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../datastores/mongo/">MongoDB Atlas</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Redis</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../datastores/redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">OpenAI</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#creating-an-account">Creating an Account</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#creating-a-database">Creating a Database</a>
+    <li class="toctree-l2"><a class="reference internal" href="#get-your-api-key">Get Your API Key</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../ai/openai/">OpenAI</a>
                   </li>
               </ul>
       </div>
@@ -79,7 +79,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Datastores &raquo;</li>
-      <li>Redis</li>
+      <li>OpenAI</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -88,25 +88,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="redis">Redis</h2>
-<p>Redis is an in-memory datastore which boasts high speed data storage and access. Redis is most often used for caching frequently used data that doesn't need to be stored forever, such as client sessions for a web service.</p>
-<p>Redis offers a free version of their enterprise cloud for personal use. This is a step-by-step guide on setting up an account with Redis.</p>
+                <h2 id="openai">OpenAI</h2>
+<p>The company which made the famous ChatGPT, GPT4, DALL-E.</p>
 <h3 id="creating-an-account">Creating an Account</h3>
-<p>First, visit <a href="https://redis.com/try-free/">Redis' Try Free Page</a> and either fill out the form or login with a Google/GitHub account:</p>
-<p><img src="../../assets/img/redis/signup-form.png" width="300px"></p>
-<p>Depending on your sign-up method, an email confirmation may be sent. Confirm your email address then proceed to the next step.</p>
-<h3 id="creating-a-database">Creating a Database</h3>
-<p>You will automatically be brought to the page to create your database. You can simply leave the settings in their defaults and just click the <strong>Let's start free</strong> button:</p>
-<p><img src="../../assets/img/redis/start-free.png" width="500px"></p>
-<p>You should immediately see your database being set up. After a couple of minutes, your database will be fully ready to be used:</p>
-<p><img src="../../assets/img/redis/database.png" width="700px"></p>
-<p>Congratulations! You have successfully set up your Redis cloud instance to work properly via remote connection. For a guide on how to get started using your database, check out the <a href="https://docs.oyoclass.com/python3editor/extralibs/redis">Python3 Editor Redis Docs</a>.</p>
+<p>First, visit the <a href="https://platform.openai.com/">OpenAI Platform Page</a>. If you already have an account, you can sign in directly, otherwise you can click "Sign Up" or sign in with your existing Google/Microsoft/Apple accounts.</p>
+<p><img src="../../assets/img/openai/account.png" width="500px"></p>
+<h3 id="get-your-api-key">Get Your API Key</h3>
+<p>Once you have created an account and logged in, click on the top right corner, then click "View API Keys".</p>
+<p><img src="../../assets/img/openai/settings.png" width="500px">.</p>
+<p>This will take you to the "API Keys" page. On this page, click "+ Create new secret key".</p>
+<p><img src="../../assets/img/openai/key1.png" width="500px"></p>
+<p>In the pop-up modal, you can enter the name of the key, such as "my test key", "my first key", or just leave it blank, and then click "Create Secret Key".</p>
+<p><img src="../../assets/img/openai/key2.png" width="500px"> </p>
+<p>After that, you will then see a modal showing your API key. Click the "copy" button to the right to copy your API key. Please note that you may want to save the key somewhere, as it won't show up in OpenAI again. If you lose it, you will need to create a new one.</p>
+<p><img src="../../assets/img/openai/key3.png" width="500px"></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../mongo/" class="btn btn-neutral float-left" title="MongoDB Atlas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../ai/openai/" class="btn btn-neutral float-right" title="OpenAI">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../datastores/redis/" class="btn btn-neutral float-left" title="Redis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -129,10 +129,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../mongo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../datastores/redis/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../../ai/openai/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
