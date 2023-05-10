@@ -9,3 +9,4 @@ nav:
         - 'Firebase': 'datastores/firebase.md'
         - 'MongoDB Atlas': 'datastores/mongo.md'
         - 'Redis': 'datastores/redis.md'
+        - 'OpenAI': 'ai/openai.md'
